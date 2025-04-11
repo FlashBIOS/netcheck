@@ -17,7 +17,7 @@ if ! git diff-index --quiet HEAD --; then
 fi
 
 # Fetch the latest changes from the remote.
-git fetch
+git fetch --tags
 
 # Check if the local master branch is up to date.
 LOCAL=$(git rev-parse master)
