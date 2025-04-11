@@ -27,14 +27,14 @@ if [ "$LOCAL" != "$REMOTE" ]; then
   echo "Error: The local master branch is not up to date with origin/master." >&2
   exit 1
 fi
-go "30"
+echo "30"
 # Fetch all tags and find the latest semver tag
 latest_tag=$(git tag --sort=-v:refname | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' | head -n 1)
-go "33"
+echo "33"
 if [[ -z "$latest_tag" ]]; then
   latest_tag="v0.0.0"
 fi
-go "37"
+echo "37"
 printf "Latest tag: %s\n" "$latest_tag"
 
 # Parse semver components
