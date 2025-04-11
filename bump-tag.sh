@@ -60,7 +60,7 @@ printf "Next tag will be: %s\n" "$next_tag"
 # Confirm and tag
 read -rp "Tag this commit as $next_tag? [y/N] " confirm
 if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
-  git tag "$next_tag"
+  git tag -a "$next_tag" -m "$next_tag"
   git push origin "$next_tag"
   printf "🚀 Tag %s pushed — release will be auto-created.\n" "$next_tag"
 else
