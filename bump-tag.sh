@@ -19,7 +19,7 @@ fi
 echo "19"
 # Fetch the latest changes from the remote.
 git fetch
-go "20"
+echo "20"
 # Check if the local master branch is up to date.
 LOCAL=$(git rev-parse master)
 REMOTE=$(git rev-parse origin/master)
