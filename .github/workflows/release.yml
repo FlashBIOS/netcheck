@@ -4,15 +4,6 @@ permissions:
   contents: write
 
 on:
-  workflow_dispatch:
-    inputs:
-      release_tag:
-        required: true
-        type: string
-        description : "v*.*.*"
-  pull_request:
-    branches:
-      - master
   push:
     tags:
       - 'v*.*.*'
